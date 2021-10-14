@@ -1,9 +1,8 @@
 "use strict";
 exports.__esModule = true;
-var react_1 = require("react");
-function Home() {
-    return (<div>
-            
-        </div>);
-}
+var React = require("react");
+var Home = function () {
+    return (React.createElement("div", null,
+        React.createElement("p", null, "Test!!!!")));
+};
 exports["default"] = Home;
