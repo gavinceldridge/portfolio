@@ -1,9 +1,10 @@
 import React from "react";
+import Button from "@mui/material/Button";
 const Home: React.FC = () => {
 	return (
-
-		<p>home</p>
-
+		<Button variant="contained" color="success">
+			Success
+		</Button>
 	);
 };
 

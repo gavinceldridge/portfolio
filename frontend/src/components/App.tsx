@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
+import "../sass/bootstrap-theme.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./Home";
