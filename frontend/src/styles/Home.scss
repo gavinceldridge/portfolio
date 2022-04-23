@@ -1,23 +1,44 @@
 @import "./bootstrap-theme.scss";
 
+svg {
+	position: relative;
+}
+
+circle {
+	fill: rgba(0,0,0,0);
+	stroke: black;
+	stroke-width: 2;
+	stroke-dasharray: 250;
+	stroke-dashoffset: 1000;
+	animation: rotate 5s linear infinite;
+  }
+  
+  @keyframes rotate {
+	to {
+	  stroke-dashoffset: 0;
+	}
+  }
+
 header {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px 50px;
+	// padding: 20px 50px;
+	padding: 3%;
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.showcase {
+.video-container {
 	position: absolute;
 	right: 0;
+	top: 0;
 	width: 100%;
 	min-height: 100vh;
-	padding: 100px;
+	padding: 5%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -26,7 +47,12 @@ header {
 	z-index: 2;
 }
 
-.showcase video {
+.video-container.active
+{
+  right: 300px;
+}
+
+.video-container video {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -45,17 +71,24 @@ header {
 .text {
 	position: relative;
 	z-index: 10;
+	font-family: 'Times New Roman', Times, serif;
+	color: #fff;
+
 }
 
 .text h1 {
 	font-size: 3rem;
-	color: #fff;
 	font-weight: 400;
 	margin-bottom: 0;
 	top: 0;
 	left: 50%;
 	// position: absolute;
 }
+
+.bottom-text {
+	// opacity: 1;
+}
+
 
 .menu-toggle {
 	background: url("../assets/menu.png");
@@ -67,6 +100,15 @@ header {
 	height: 60px;
 	background-position: center;
 	cursor: pointer;
+}
+
+.menu-toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
 }
 
 .slide-in-left-text {
