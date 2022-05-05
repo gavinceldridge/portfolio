@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import oceanVid from "../assets/ocean.mp4";
 
+import Menu from "./Menu";
+
+import oceanVid from "../assets/ocean.mp4";
 import "../styles/Home.css";
 import logo from "../assets/GCE-Tech-logos_white.png";
 
@@ -22,15 +24,14 @@ const Home: React.FC = () => {
 		return () => clearInterval(interval);
 	}, [descriptorInd]);
 
-	// const menuToggle = document.querySelector('.toggle');
-	// const showcase = document.querySelector('.');
-
-	// menuToggle.addEventListener('click', () => {
-	//   menuToggle.classList.toggle('active');
-	//   showcase.classList.toggle('active');
-	// })
-
 	const [toggle, setToggle] = useState(false);
+
+	const navItems = ["About", "Projects", "Contact"];
+	
+	interface NavItems {
+		items: Array<string>;
+	}
+	
 
 	return (
 		<>
@@ -38,13 +39,10 @@ const Home: React.FC = () => {
 				<header>
 					<div className="logo-container">
 						<img height="150" src={logo}></img>
-						<svg height="100" width="100">
-							<circle cx="50" cy="50" r="40" />
-						</svg>
 					</div>
 
 					<div
-						className={`menu-toggle ${toggle ? "active" : ""}`}
+						className={`mobile-menu-toggle ${toggle ? "active" : ""}`}
 						onClick={() => setToggle(!toggle)}
 					></div>
 				</header>
@@ -54,10 +52,11 @@ const Home: React.FC = () => {
 						{descriptors[descriptorInd]}
 					</h1>
 					<h2 className="slide-in-left-text bottom-text">
-						Based in: Chico, CA
+						Currently based in: Northern CA, USA
 					</h2>
 				</div>
 			</section>
+			<Menu items = {navItems} />
 		</>
 	);
 };
