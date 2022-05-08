@@ -5,7 +5,7 @@ interface projectData {
     subtitle: string;
     image: any;
     link: string;
-    techStack: Array<technologyFavicon>;
+    techStack: any;
 }
 
 export default projectData;

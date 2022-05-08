@@ -191,9 +191,9 @@ header {
 	width: 100%;
 }
 
-.slide-in-left-text {
-	animation: slide-in-left 1.5s ease;
-}
+// .slide-in-left-text {
+// 	animation: slide-in-left 1.5s ease;
+// }
 
 .descriptor {
 	animation: slide-in-out-right 5s ease infinite;
@@ -227,11 +227,11 @@ header {
 
 @media screen and (max-width: 768px) {
 	.text h1 {
-		font-size: 2.5rem;
+		font-size: 1.5rem;
 	}
 
 	.text h2 {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 
 	.desktop-menu {
@@ -241,4 +241,34 @@ header {
 	.mobile-menu-toggle {
 		display: inherit;
 	}
+
+	
+	@keyframes slide-in-out-right {
+		0% {
+			opacity: 0;
+			transform: translateX(50%);
+		}
+	
+		30% {
+			opacity: .5;
+			transform: translateX(0);
+		}
+	
+		70% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	
+		80% {
+			opacity: 0;
+		}
+	
+		100% {
+			transform: translateX(-200%);
+			opacity: 0;
+		}
+
+	}
+
+
 }

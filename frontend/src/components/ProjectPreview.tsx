@@ -23,8 +23,8 @@ const ProjectPreview: React.FC<props> = ({ project }): JSX.Element => {
                 </a>
                 <Card.Body>
                     <Card.Title>{project.title}</Card.Title>
-                    {project.techStack.map((tech: string) => {
-                        return <img className="mx-1 my-2 technology-icon" key={tech} src={tech}></img>;
+                    {project.techStack.map((tech: {url: string, name: string}, index: number) => {
+                        return <img className="mx-1 my-2 technology-icon" key={index} src={tech.url} title={tech.name}></img>;
                     })}
                     <Card.Subtitle className="mb-2 text-muted">
                         {project.subtitle}

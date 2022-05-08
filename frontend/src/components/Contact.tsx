@@ -7,50 +7,81 @@ import Col from "react-bootstrap/Col";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Contact:React.FC = ():JSX.Element => {
-	return (
-		<>
+import "../styles/Contact.css";
+const Contact: React.FC = (): JSX.Element => {
+
+	const handleSubmit = (event: any) => {
+		// event.preventDefault();
+		console.log("Submitted");
+	}
+
+
+    return (
+        <div className="contact-page">
             <Navbar active="contact" />
             <Container>
-                <h2 className="text-center mt-3">Reach Out!</h2>
-                <hr></hr>
-				<Row className="mt-4">
-					<Col>
-						<h3>Email</h3>
-						<p>
-							<a href="mailto:gceldridgetech@gmail.com">
-								gceldridgetech@gmail.com
-							</a>
-						</p>
-					</Col>
-					<Col>
-						<h3>LinkedIn</h3>
-						<p>
-							<a href="linkedin.com/in/gavineldridge" target="_">
-								My LinkedIn
-							</a>
-						</p>
-					</Col>
-					<Col>
-						<h3>Phone</h3>
-						<p>
-							<a href="tel:+1-831-277-2449">
-								(831) 277-2449
-							</a>
-						</p>
-					</Col>
-					<Col>
-						<h3>Github</h3>
-						<p>
-							<a href="https://github.com/gavinceldridge" target="_">
-								My Github
-							</a>
-						</p>
-					</Col>
-				</Row>
+
+				<h3 className="text-center mt-3">Leave me a message</h3>
+				<hr></hr>
+
+                <form onSubmit={handleSubmit} action="https://formspree.io/f/moqryabn" method="POST">
+                    <Row className="m-md-4 w-100">
+                        <Col xs={6}>
+                            <div className="name-container">
+                                <label className="name-label" htmlFor="name">
+                                    Name
+                                </label>
+                                <input
+                                    className="name-input"
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Your name"
+									required
+
+                                />
+                            </div>
+                        </Col>
+
+                        <Col xs={6}>
+                            <div className="email-container">
+                                <label className="email-label" htmlFor="email">
+                                    Email
+                                </label>
+                                <input
+                                    className="email-input"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Your email"
+									required
+
+                                />
+                            </div>
+                        </Col>
+                    </Row>
+                    <div className="message-container">
+                        <label className="message-label" htmlFor="message">
+                            Message
+                        </label>
+                        <textarea
+                            className="message-input"
+                            id="message"
+                            name="message"
+                            placeholder="Your message"
+							required
+                        />
+                    </div>
+
+                    <div className="submit-container">
+                        <button className="submit-button" type="submit">
+                            Send
+                        </button>
+                    </div>
+                </form>
             </Container>
-			<Footer />
-        </>
-	);
-}
+            <Footer />
+        </div>
+    );
+};
 export default Contact;

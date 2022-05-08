@@ -12049,11 +12049,6 @@ header {
   width: 100%;
 }
 
-.slide-in-left-text {
-  -webkit-animation: slide-in-left 1.5s ease;
-          animation: slide-in-left 1.5s ease;
-}
-
 .descriptor {
   -webkit-animation: slide-in-out-right 5s ease infinite;
           animation: slide-in-out-right 5s ease infinite;
@@ -12111,16 +12106,66 @@ header {
 
 @media screen and (max-width: 768px) {
   .text h1, .text .h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   .text h2, .text .h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .desktop-menu {
     display: none;
   }
   .mobile-menu-toggle {
     display: inherit;
+  }
+  @-webkit-keyframes slide-in-out-right {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%);
+    }
+    30% {
+      opacity: .5;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    70% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(-200%);
+              transform: translateX(-200%);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-in-out-right {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%);
+    }
+    30% {
+      opacity: .5;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    70% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(-200%);
+              transform: translateX(-200%);
+      opacity: 0;
+    }
   }
 }
 /*# sourceMappingURL=Home.css.map */

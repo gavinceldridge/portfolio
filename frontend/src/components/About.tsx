@@ -38,12 +38,12 @@ const About: React.FC = (): JSX.Element => {
 
     const carouselContent: Array<carouselContentItem> = [
         {
-            title: "Enjoying the ocean",
-            subtitle: "I grew up in a surfing family and have a deep appreciation for the ocean.",
+            title: "Catching a wave",
+            subtitle: "",
             image: sarf,
         },
         {
-            title: "Climbing things!",
+            title: "Falling off rocks",
             subtitle: "Trip to Auburn Quarry",
             image: climb,
         },
@@ -103,7 +103,7 @@ const About: React.FC = (): JSX.Element => {
                         <Col sm={12} md={6} className="d-flex flex-column justify-content-center align-items-center">
                         
                             <h2 className="about-text fs-4 text-center">
-                                When I'm not coding, you can probably find me...
+                                If I'm not coding, you can probably find me...
                             </h2>
 
                         </Col>
@@ -178,7 +178,7 @@ const About: React.FC = (): JSX.Element => {
                     </p> */}
                 </main>
             </Container>
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 };

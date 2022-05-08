@@ -6,35 +6,25 @@ const DescriptorSlidingText: React.FC = (): JSX.Element => {
         "Activist 🌱",
         "Surfer 🌊",
         "Brother 👨‍👦‍👦",
-        "Minimalist 🌳",
         "Climber 🧗",
         "Musician 🎸",
     ];
 
-    const [descriptorInd, setDescriptorInd] = useState(1);
+    const [descriptorInd, setDescriptorInd] = useState(3);
+
+
+    const [seconds, setSeconds] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log(descriptors[descriptorInd]);
-            setDescriptorInd((descriptorInd + 1) % descriptors.length);
-            const descContainer = document.querySelector(
-                ".descriptor-container"
-            );
-            let descriptor = document.querySelector(".descriptor");
-            if (descriptor && descContainer) {
-                descriptor.remove();
-                descriptor = document.createElement("h1");
-                descriptor.className = "descriptor";
-                descriptor.textContent = descriptors[descriptorInd];
-                descContainer.appendChild(descriptor);
-            }
+            setDescriptorInd( descriptorInd => (descriptorInd + 1) % descriptors.length);
         }, 5000);
-        return () => clearInterval(interval);
-    }, [descriptorInd]);
+          return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className="descriptor-container">
-            <h1 className="descriptor">{descriptors[0]}</h1>
+            <h1 className="descriptor">{descriptors[descriptorInd]}</h1>
         </div>
     );
 };

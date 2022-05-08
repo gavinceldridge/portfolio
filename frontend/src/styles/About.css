@@ -11880,5 +11880,8 @@ fieldset:disabled .btn {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .carousel-caption {
+    display: none;
+  }
 }
 /*# sourceMappingURL=About.css.map */

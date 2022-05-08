@@ -9,6 +9,7 @@
 .selfie {
 	max-height: 50vh;
 	overflow: hidden;
+
 	@media screen and (max-width: 768px) {
 		max-height: 30vh;
 	}
@@ -25,10 +26,15 @@
 	align-items: center;
 }
 
-.doing-things {
-	@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+	.doing-things {
 		flex-direction: column;
 	}
+
+	.carousel-caption {
+		display: none;
+	}
+
 }
 
 
