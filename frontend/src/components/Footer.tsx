@@ -25,9 +25,9 @@ const Footer: React.FC = (): JSX.Element => {
             <div className="socials">
                 {socials.map((social: any) => {
                     return (
-                        <Link className="fs-1" to={social.url} key={social.url} target="_">
+                        <a className="fs-1" href={social.url} key={social.url} target="_">
                             <i className={social.class}></i>
-                        </Link>
+                        </a>
                     );
                 })}
             </div>
