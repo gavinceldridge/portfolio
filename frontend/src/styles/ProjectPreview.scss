@@ -1,0 +1,12 @@
+.project-container {
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.technology-icon {
+	width: 32px;
+	height: 32px;
+}

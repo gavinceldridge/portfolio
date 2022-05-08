@@ -1,0 +1,47 @@
+@import "./bootstrap-theme.scss";
+
+.selfie-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.selfie {
+	max-height: 50vh;
+	overflow: hidden;
+	@media screen and (max-width: 768px) {
+		max-height: 30vh;
+	}
+}
+
+.about-text {
+	color: black;
+}
+
+.about-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.doing-things {
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+
+// .introduction {
+// 	margin: 10px 0 0 10px;
+// 	white-space: nowrap;
+// 	overflow: hidden;
+// 	width: 30em;
+// 	animation: type 6s steps(60, end);
+// }
+
+// @keyframes type {
+// 	from {
+// 		width: 0;
+// 	}
+// }

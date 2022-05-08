@@ -3,6 +3,10 @@ import "../styles/bootstrap-theme.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./Home";
+import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
+
 import TextConversions from "./TextConversions";
 
 const App: React.FC = () => {
@@ -10,6 +14,9 @@ const App: React.FC = () => {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/projects" element={<Projects />} />
+				<Route path="/contact" element={<Contact />} />
 				<Route path="/text" element={<TextConversions />} />
 			</Routes>
 		</BrowserRouter>

@@ -1,0 +1,150 @@
+@import "./bootstrap-theme.scss";
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	background-color: #f5f5f5;
+	height: auto;
+
+	img {
+		position: relative;
+		top: 0;
+		max-height: 150px;
+		margin-left: 5rem;
+	}
+
+	ul {
+		position: relative;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 40rem;
+		height: 100%;
+		margin-right: 5rem;
+		// text-align: start;
+
+		li {
+			// width: 100%;
+		}
+
+		li a {
+			text-decoration: none;
+			font-size: 24px;
+			color: black;
+		}
+
+		li a:hover {
+			color: black;
+		}
+
+		li a::after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background: black;
+			transition: width .5s;
+		}
+
+		li a:hover::after {
+			width: 100%;
+		}
+
+	}
+}
+
+nav.expand {
+	height: 300px;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+.mobile-menu {
+	display: none;
+}
+
+.nav-active {
+	font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+
+	.menu {
+		display: none;
+	}
+
+
+	.menu-toggle {
+		display: block;
+		height: 3rem;
+		width: 3rem;
+		position: absolute;
+		top: 0;
+		right: 10%;
+		transform: translate(-50%, 100%);
+	}
+
+	.mobile-menu.active {
+		display: block;
+		position: absolute;
+		top: 10%;
+		right: 10%;
+		width: 200px;
+		height: 10%;
+		display: flex;
+		justify-content: center;
+		transform: translate(50%);
+	}
+
+
+
+	.mobile-menu ul {
+		position: relative;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		// background-color: black;
+
+
+	}
+
+	.mobile-menu ul li {
+		list-style: none;
+	}
+
+	.mobile-menu ul li a {
+		text-decoration: none;
+		font-size: 24px;
+		color: black;
+	}
+
+	.mobile-menu ul li a::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: black;
+		transition: width .5s;
+	}
+
+	.mobile-menu ul li a:target::after {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	nav.expand {
+		height: auto;
+	}
+
+}

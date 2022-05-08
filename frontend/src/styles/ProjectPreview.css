@@ -1,0 +1,18 @@
+@media screen and (max-width: 768px) {
+  .project-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.technology-icon {
+  width: 32px;
+  height: 32px;
+}
+/*# sourceMappingURL=ProjectPreview.css.map */
