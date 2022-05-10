@@ -49,6 +49,13 @@ const Home: React.FC = () => {
             </section>
             <Menu items={navItems} type="mobile" />
             <Menu items={navItems} type="desktop" />
+
+
+
+            <script>
+                document.querySelector("video").play();
+            </script>
+
         </>
     );
 };
