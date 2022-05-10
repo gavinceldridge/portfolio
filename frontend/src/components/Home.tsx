@@ -27,7 +27,7 @@ const Home: React.FC = () => {
                         onClick={() => setToggle(!toggle)}
                     ></div>
                 </header>
-                <video src={oceanVid} muted loop autoPlay></video>
+                <video src={oceanVid} muted loop autoPlay playsInline></video>
                 <div className="text">
                     <DescriptorSlidingText />
                     <h2 className="slide-in-left-text bottom-text">
