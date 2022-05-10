@@ -27,7 +27,13 @@ const Home: React.FC = () => {
                         onClick={() => setToggle(!toggle)}
                     ></div>
                 </header>
-                <video src={oceanVid} muted loop autoPlay playsInline></video>
+                <video
+                    src={oceanVid}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                ></video>
                 <div className="text">
                     <DescriptorSlidingText />
                     <h2 className="slide-in-left-text bottom-text">
@@ -50,12 +56,7 @@ const Home: React.FC = () => {
             <Menu items={navItems} type="mobile" />
             <Menu items={navItems} type="desktop" />
 
-
-
-            <script>
-                document.querySelector("video").play();
-            </script>
-
+            <script>document.querySelector("video").play();</script>
         </>
     );
 };

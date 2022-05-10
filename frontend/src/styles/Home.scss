@@ -1,5 +1,9 @@
 @import "./bootstrap-theme.scss";
 
+* {
+	font-family: "raleway", sans-serif;
+}
+
 header {
 	position: absolute;
 	top: 0;
@@ -52,17 +56,17 @@ header {
 
 	position: absolute;
 	z-index: 10;
-	font-family: 'Times New Roman', Times, serif;
-	color: #fff;
+	color: rgba(255, 255, 255, 0.75);
 	right: 5%;
 	bottom: 0%;
 
+
 	a {
-		color: #fff;
+		color: rgba(255, 255, 255, 0.75);
 	}
 
 	svg {
-		color: white;
+		color: rgba(255, 255, 255, 0.75);
 		width: 1rem;
 		height: 1rem;
 		margin-bottom: .25rem;
@@ -242,27 +246,27 @@ header {
 		display: inherit;
 	}
 
-	
+
 	@keyframes slide-in-out-right {
 		0% {
 			opacity: 0;
 			transform: translateX(50%);
 		}
-	
+
 		30% {
 			opacity: .5;
 			transform: translateX(0);
 		}
-	
+
 		70% {
 			opacity: 1;
 			transform: translateX(0);
 		}
-	
+
 		80% {
 			opacity: 0;
 		}
-	
+
 		100% {
 			transform: translateX(-200%);
 			opacity: 0;

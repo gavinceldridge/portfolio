@@ -11858,6 +11858,7 @@ fieldset:disabled .btn {
 }
 
 .about-title {
+  font-family: 'Roboto Mono', monospace;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
