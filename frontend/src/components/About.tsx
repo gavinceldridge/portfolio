@@ -60,6 +60,16 @@ const About: React.FC = (): JSX.Element => {
 			image: ry,
 		},
 	];
+	const technologies = [
+		"TypeScript",
+		"React",
+        "Svelt",
+		"Express",
+		"MongoDB",
+		"Sass",
+		"Docker",
+        "PSQL",
+	];
 
 	const switchResume = () => {
 		setShowResume(!showResume);
@@ -89,13 +99,6 @@ const About: React.FC = (): JSX.Element => {
 								California (Chico) but plan on moving back to
 								the sea (Los Gatos) by June 2022.
 							</p>
-							{/* <p className="about-text fs-4 text-center mt-3">
-								I have been pursuing my passion for programming
-								over the last 7 years and have 2 years of
-								professional industry experience. I recently
-								left my old job and am looking for work in a
-								creative and inspiring environment.
-							</p> */}
 						</Col>
 					</Row>
 
@@ -118,6 +121,24 @@ const About: React.FC = (): JSX.Element => {
 							ambitious, but healthy work environment.
 						</p>
 						<Col sm={12}></Col>
+					</Row>
+
+					<hr></hr>
+
+					<Row className="d-flex flex-row justify-content-center align-items-center">
+                    <Col sm={12} md={4}>
+							<h2 className="about-text fs-4">
+								Some of my current favorite technologies include:
+							</h2>
+						</Col>
+						<Col sm={12} md={8}>
+							<ul className="about-text fs-4 technologies">
+								{technologies.map((tech) => (
+									<li key={tech} className="technology">{tech}</li>
+								))}
+							</ul>
+						</Col>
+						
 					</Row>
 
 					<hr></hr>

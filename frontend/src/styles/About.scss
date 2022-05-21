@@ -25,6 +25,22 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	list-style: none;
+}
+
+.technologies {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+	grid-gap: 20px;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+
+.technology{
+	// text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	font-weight: 600;
+	font-style: italic;
 }
 
 @media screen and (max-width: 768px) {
