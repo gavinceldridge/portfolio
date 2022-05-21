@@ -101,6 +101,27 @@ const About: React.FC = (): JSX.Element => {
 
 					<hr></hr>
 
+					<Row className="my-5 text-container">
+						<p>
+							I have pursued my passion for coding for almost 9
+							years now (began with Java programming when I was
+							14), and have been actively working over the last
+							2.5 years. I have worked at a variety of companies,
+							ranging from eco-friendly e-commerce stores, vegan
+							skincare lines, to mental wellness/substance abuse
+							assistance platforms. My skills lie mainly in web
+							development and as I have experience building both
+							backend and frontend systems at scale, I consider
+							myself a fullstack engineer but lately I have been
+							enjoying working on frontend projects a tad bit
+							more. I hope to soon find myself in a fast-paced,
+							ambitious, but healthy work environment.
+						</p>
+						<Col sm={12}></Col>
+					</Row>
+
+					<hr></hr>
+
 					<Row className="my-4 doing-things">
 						<Col
 							sm={12}
@@ -130,7 +151,7 @@ const About: React.FC = (): JSX.Element => {
 							</Carousel>
 						</Col>
 					</Row>
-                    <hr></hr>
+					<hr></hr>
 					<Row>
 						<p className="about-text fs-4 my-4 text-center">
 							<Button onClick={switchResume}>
@@ -139,7 +160,11 @@ const About: React.FC = (): JSX.Element => {
 							</Button>
 						</p>
 						<iframe
-							src={window.screen.width <= 768 ? "https://resume.creddle.io/embed/dhly7ihudiv" : resumePDF}
+							src={
+								window.screen.width <= 768
+									? "https://resume.creddle.io/embed/dhly7ihudiv"
+									: resumePDF
+							}
 							width={showResume ? "800px" : "0px"}
 							height={showResume ? "1150px" : "0px"}
 							seamless
