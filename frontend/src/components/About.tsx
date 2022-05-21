@@ -89,13 +89,13 @@ const About: React.FC = (): JSX.Element => {
 								California (Chico) but plan on moving back to
 								the sea (Los Gatos) by June 2022.
 							</p>
-							<p className="about-text fs-4 text-center mt-3">
+							{/* <p className="about-text fs-4 text-center mt-3">
 								I have been pursuing my passion for programming
 								over the last 7 years and have 2 years of
 								professional industry experience. I recently
 								left my old job and am looking for work in a
 								creative and inspiring environment.
-							</p>
+							</p> */}
 						</Col>
 					</Row>
 
