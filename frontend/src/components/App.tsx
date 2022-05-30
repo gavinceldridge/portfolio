@@ -8,18 +8,23 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 
 import TextConversions from "./TextConversions";
+import MouseAnimator from "./MouseAnimator";
+
 
 const App: React.FC = () => {
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/text" element={<TextConversions />} />
-			</Routes>
-		</BrowserRouter>
+		<>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/projects" element={<Projects />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/text" element={<TextConversions />} />
+				</Routes>
+				<MouseAnimator />
+			</BrowserRouter>
+		</>
 	);
 };
 
