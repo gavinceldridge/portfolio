@@ -26,7 +26,7 @@ const Contact: React.FC = (): JSX.Element => {
 
                 <form onSubmit={handleSubmit} action="https://formspree.io/f/moqryabn" method="POST">
                     <Row className="m-md-4 w-100">
-                        <Col xs={6}>
+                        <Col sm={6} xs={12}>
                             <div className="name-container">
                                 <label className="name-label" htmlFor="name">
                                     Name
@@ -43,7 +43,7 @@ const Contact: React.FC = (): JSX.Element => {
                             </div>
                         </Col>
 
-                        <Col xs={6}>
+                        <Col sm={6} xs={12} className="mt-2 mt-sm-0">
                             <div className="email-container">
                                 <label className="email-label" htmlFor="email">
                                     Email
