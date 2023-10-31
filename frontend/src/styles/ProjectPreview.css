@@ -1,13 +1,8 @@
 @media screen and (max-width: 768px) {
   .project-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -15,4 +10,9 @@
   width: 32px;
   height: 32px;
 }
-/*# sourceMappingURL=ProjectPreview.css.map */
+
+.role-text {
+  font-size: 0.7rem;
+  color: rgb(79, 79, 79);
+  display: block;
+}/*# sourceMappingURL=ProjectPreview.css.map */

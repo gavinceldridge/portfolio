@@ -5,17 +5,16 @@ import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-
 import selfie from "../assets/selfie.jpg";
 import sarf from "../assets/sarf.jpg";
 import climb from "../assets/climb.jpg";
 import guitar from "../assets/guitar.png";
 import ry from "../assets/ry.jpg";
-import resumePDF from "../assets/SoftwareEngineeringResume.pdf";
+import resumePDF from "../assets/Resume.pdf";
 
 import "../styles/About.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 const About: React.FC = (): JSX.Element => {
 	const [intro, setIntro] = useState("");
 	const [showResume, setShowResume] = useState(false);
@@ -63,12 +62,14 @@ const About: React.FC = (): JSX.Element => {
 	const technologies = [
 		"TypeScript",
 		"React",
-        "Svelt",
+		"C# / .NET ",
+		"AWS Cloud Platform",
+		"Postgres (PSQL)",
+		"Svelt",
 		"Express",
 		"MongoDB",
 		"Sass",
 		"Docker",
-        "PSQL",
 	];
 
 	const switchResume = () => {
@@ -83,6 +84,7 @@ const About: React.FC = (): JSX.Element => {
 						<Col sm={12} md={6}>
 							<div className="selfie-container">
 								<img
+									alt={"Gavins profile pic"}
 									className="selfie d-flex justify-content-center"
 									src={selfie}
 								></img>
@@ -94,10 +96,9 @@ const About: React.FC = (): JSX.Element => {
 								{intro.length < goal.length ? "|" : ""}
 							</h1>
 							<p className="about-text fs-4 text-center mt-3">
-								a fullstack software engineer from Monterey,
-								California. I'm currently based out of Northern
-								California (Chico) but plan on moving back to
-								the sea (Los Gatos) by June 2022.
+								a fullstack software engineer originally from
+								Monterey, California, though I'm currently based
+								out of San Francisco.
 							</p>
 						</Col>
 					</Row>
@@ -108,17 +109,17 @@ const About: React.FC = (): JSX.Element => {
 						<p>
 							I have pursued my passion for coding for almost 9
 							years now (began with Java programming when I was
-							14), and have been actively working over the last
-							2.5 years. I have worked at a variety of companies,
-							ranging from eco-friendly e-commerce stores, vegan
-							skincare lines, to mental wellness/substance abuse
-							assistance platforms. My skills lie mainly in web
-							development and as I have experience building both
-							backend and frontend systems at scale, I consider
-							myself a fullstack engineer but lately I have been
-							enjoying working on frontend projects a tad bit
-							more. I hope to soon find myself in a fast-paced,
-							ambitious, but healthy work environment.
+							14), and have been actively working over the last 3
+							years. I have worked at a variety of companies,
+							ranging from eco-friendly e-commerce stores, stem
+							cell growth factor skincare lines, to mental
+							wellness/substance abuse assistance platforms. I
+							currently work at{" "}
+							<a href="https://getgoodlab.com" target="_">
+								Good.Lab
+							</a>{" "}
+							as a fullstack engineer building out the leading ESG
+							solution for the middle market.
 						</p>
 						<Col sm={12}></Col>
 					</Row>
@@ -126,19 +127,21 @@ const About: React.FC = (): JSX.Element => {
 					<hr></hr>
 
 					<Row className="d-flex flex-row justify-content-center align-items-center">
-                    <Col sm={12} md={4}>
+						<Col sm={12} md={4}>
 							<h2 className="about-text fs-4">
-								Some of my current favorite technologies include:
+								Some of my current favorite technologies
+								include:
 							</h2>
 						</Col>
 						<Col sm={12} md={8}>
 							<ul className="about-text fs-4 technologies">
 								{technologies.map((tech) => (
-									<li key={tech} className="technology">{tech}</li>
+									<li key={tech} className="technology">
+										{tech}
+									</li>
 								))}
 							</ul>
 						</Col>
-						
 					</Row>
 
 					<hr></hr>
@@ -181,9 +184,10 @@ const About: React.FC = (): JSX.Element => {
 							</Button>
 						</p>
 						<iframe
+							title={"resume"}
 							src={
 								window.screen.width <= 768
-									? "https://resume.creddle.io/embed/dhly7ihudiv"
+									? "https://resume.creddle.io/resume/dhly7ihudiv"
 									: resumePDF
 							}
 							width={showResume ? "800px" : "0px"}

@@ -1,11 +1,12 @@
 import technologyFavicon from "../enums/technologyFavicons";
 
-interface projectData {
-    title: string;
-    subtitle: string;
-    image: any;
-    link: string;
-    techStack: any;
+interface ProjectData {
+	title: string;
+	subtitle: string;
+	image: any;
+	link: string;
+	techStack: any;
+	role?: string;
 }
 
-export default projectData;
+export default ProjectData;

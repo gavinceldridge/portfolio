@@ -1,45 +1,26 @@
 .contact-page {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 form {
   width: 50%;
   margin: 0 auto;
   padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 10px;
 }
 
 .name-container,
 .email-container,
 .message-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #e6e6e6;
+  flex-direction: column;
+  background-color: rgb(230, 230, 230);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -53,7 +34,7 @@ label {
 
 input,
 textarea {
-  background-color: #e6e6e6;
+  background-color: rgb(230, 230, 230);
   color: #000;
   border: none;
   height: 1.75rem;
@@ -81,28 +62,25 @@ textarea {
   color: #fff;
   font-size: 1.25rem;
   font-weight: 600;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .submit-button:hover {
-  -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.9);
-          box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.9);
   border-radius: 1.75rem;
 }
 
 @media screen and (max-width: 768px) {
   form {
-    padding: .5rem;
+    padding: 0.5rem;
     width: 100%;
   }
   .name-container,
   .email-container,
   .message-container {
     width: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
   }
   .message-container {
     margin-top: 1rem;
@@ -111,5 +89,4 @@ textarea {
     height: 5rem;
     max-height: 5rem;
   }
-}
-/*# sourceMappingURL=Contact.css.map */
+}/*# sourceMappingURL=Contact.css.map */
