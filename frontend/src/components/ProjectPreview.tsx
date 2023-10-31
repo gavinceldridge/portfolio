@@ -21,27 +21,31 @@ const ProjectPreview: React.FC<props> = ({ project }): JSX.Element => {
 				<a href={project.link} target="_">
 					<Card.Img variant="top" src={project.image} />{" "}
 				</a>
-				<Card.Body>
-					<Card.Title>{project.title}</Card.Title>
-					{project.role && (
-						<span className="role-text">- {project.role}</span>
-					)}
-					{project.techStack.map(
-						(
-							tech: { url: string; name: string },
-							index: number
-						) => {
-							return (
-								<img
-									alt={tech.name}
-									className="mx-1 my-2 technology-icon"
-									key={index}
-									src={tech.url}
-									title={tech.name}
-								></img>
-							);
-						}
-					)}
+				<Card.Body className="d-flex flex-column">
+					<div>
+						<Card.Title>{project.title}</Card.Title>
+						{project.role && (
+							<span className="role-text">- {project.role}</span>
+						)}
+						<div>
+							{project.techStack.map(
+								(
+									tech: { url: string; name: string },
+									index: number
+								) => {
+									return (
+										<img
+											alt={tech.name}
+											className="mx-1 my-2 technology-icon"
+											key={index}
+											src={tech.url}
+											title={tech.name}
+										></img>
+									);
+								}
+							)}
+						</div>
+					</div>
 					<Card.Subtitle className="mb-2 text-muted">
 						{project.subtitle}
 					</Card.Subtitle>
